@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+      <title>My Bag Store</title>
+
+          <meta charset="UTF-8">
+
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content"ie=edge">
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<link rel="stylesheet" href="./css/style.css">
+	<style>	
+	/* fonts */
+	@font-face{
+	font-family:"OpenSans-regular";
+	src:url(../fonts/OpenSans-Regular.ttf)
+	}
+	@font-face{
+	font-family:"OpenSans-light";
+	src:url(../fonts/OpenSans-Light.ttf)
+	}
+	@font-face{
+	font-family:"OpenSans-bold";
+	src:url(../fonts/OpenSans-Bold.ttf)
+	}
+	@font-face{
+	font-family:"OpenSans-semibold";
+	src:url(../fonts/OpenSans-SemiBold.ttf)
+	}
+	@font-face{
+	font-family:"OpenSans-italic";
+	src:url(../fonts/OpenSans-Italic.ttf)
+	}
+	/* colors */
+
+	:root{
+	--primary:yellow;
+	--secondary:blue;
+	--ternary:green;
+	--danger:red;
+	--light:white;
+	--footer:black;
+	}
+
+	/* Reset */
+	{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+	}
+
+	body{
+	-webkit-font-smoothing:antialiased;
+	}
+	.container{
+	width:120%;
+	padding:0 18px;
+	margin:0 auto;
+	}
+
+	@media (min-width:580px){
+	.container{
+	max-width:550px;}
+	}
+
+	@media (min-width:770px){
+	.container{
+	max-width:730px;}
+	}
+	@media (min-width:980px){
+	.container{
+	max-width:860px;}
+	}
+
+	@media (min-width:1225px){
+	.container{
+	max-width:1220px;}
+	}
+
+	header.topbar{
+	background:var(--primary);
+	color:var(--pure)
+	font-family:"OpenSans-semibold";
+	padding:0.75rem 0;
+	}
+
+	header.topbar.auth>div a{
+	color:var(--pure):
+	text-decoration:none;
+	}
+
+	header.topbar.icons a{
+	margin-right:0.6rem;
+	}
+
+	header.topbar.auth.divider{
+	padding:0 1rem;
+	}
+
+	header.topbar.auth>div img{
+	margin-right:0.35rem;
+	}
+
+	.flex{
+	display:flex;}
+
+	.justify-between{
+	justify-content:space-between;
+	}
+
+	.items-center{
+	align-items:center;
+	}
+
+nav.top{
+padding:1.5rem 0;
+}
+nav.top.contact h5,nav.top.time h5{
+font-family:"OpenSans-light";
+margin-bottom:0.25rem;
+}
+
+nav.top.contact h6,nav.top.time h6{
+font-family:"OpenSans-bold";
+letter-spacing:0.055rem;
+font-size:0.75rem;
+color:var(--ternary);
+}
+.justify-center{
+justify-content:center;
+}
+
+nav.navbar a{
+text-decoration:none;
+color:var(--secondary);
+font-family:"OpenSans-bold";
+font-size:1rem;
+padding:1rem 1.5rem;
+transition:all.3s ease;
+}
+nav.navbar a.active{
+background:var(--primary);
+color:var(--pure);
+}
+nav.navbar a:hover{
+background:var(--primary);
+color:var(--pure);
+}
+
+.magic-shadow{
+position:relative;
+background:var(--heaven);
+}
+
+.magic-shadow:after{
+content:'';
+display:block;
+width:100%;
+height:69px;
+background-image:url(../icons/download(1).png);
+background-repeat:no-repeat; 
+background-position:center;
+position:absolute;
+bottom:-27px;
+z-index:-1;
+}
+header.hero{
+height:600px;
+background-image:download(1).png;
+background-position:0% 05;
+background-repeat:no-repeat; 
+overflow:hidden;
+
+}
+header.hero .container{
+position:relative;
+}
+
+
+header.hero.welcome{
+margin-bottom:0.25rem;
+}
+
+header.hero.welcome span{
+font-family:"OpenSans-bold";
+color:var(--secondary);
+margin-right:0.75rem;
+}
+
+header.hero h1{
+font-family:"OpenSans-semibold";
+color:var(--ternary);
+font-size:2.5rem;
+margin-bottom:0.75rem;
+}
+
+header.hero h1 span{
+color:var(--primary);
+}
+
+header.hero p{
+font-family:"OpenSans-italic";
+width:50%;
+line-height:1.5;
+margin-bottom:1rem;
+}
+
+.btn{
+padding:0.50rem 0.75rem;
+border-radius:4px;
+border:none;
+line-height:0.8;
+font-sizes:1.2rem;
+cursor:pointer;
+transition:all 0.3s easet;
+border:1px solid transparent;
+}
+.btn-primary{
+background-color:purple;
+}
+
+.btn-primary:hover{
+background:var(--heaven);
+color:orange;
+border:1px solid var(--primary);
+}
+
+.btn-secondary{
+background-color:purple;
+}
+
+.btn-secondary:hover{
+background:var(--heaven);
+color:orange;
+border:1px solid var(--secondary);
+}
+header.hero button:first-child{
+margin-right:0.50rem;}
+
+header.hero .hero-image{
+position:absolute;
+top:-40px;
+right:40px;
+}
+	</style>
+
+  </head>
+
+<body>
+
+     <header class="topbar">
+<div class ="container flex justify-between items-center">
+<div class="icons">
+<a href ="#"><img src="./icons/download(1).png"alt=""></a>
+<a href ="#"><img src="./icons/download(2).png"alt=""></a>
+<a href ="#"><img src="./icons/download.png"alt=""></a>
+<a href ="#"><img src="./icons/images.jfif"alt=""></a>
+<a href ="#"><img src="./icons/images.pnp"alt=""></a>
+</div>
+<div class="auth flex items-center">
+
+<div>
+<a href="#">Log in</a>
+</div>
+<span class="divider"></span>
+
+<div>
+<a href="#">Register Now</a>
+</div>
+<span class="divider"></span>
+
+<div>
+<a href="#">0 Items - (Rs.0.00)</a>
+</div>
+
+
+</div>
+</div>
+     </header>
+
+<nav>
+<div class="top">
+<div class="container flex justify-between">
+
+<div class="contact flex items-center"></div>
+<div>
+<h5>Call us:(+94) 725 625 525</h5>
+<h6>E-mail:bag@gmail.com</h6>
+</div>
+
+<div class="branding"></div>
+<div>
+<h5>Bag Store</h5>
+</div>
+
+
+<div class="time flex items-center"></div>
+<div>
+<h5>Working Hours</h5>
+<h6>Mon-Sat(8.00a.m.-4.00p.m.)</h6>
+</div>
+
+</div>
+</div>
+
+<div class="navbar magic-shadow">
+<div class="container flex justify-center">
+<a href="#" class="active">Home</a>
+<a href="#">About us</a>
+<a href="#">Products</a>
+<a href="#">Blog</a>
+<a href="#">Shop</a>
+<a href="#">Services</a>
+<a href="#">Gallery</a>
+<a href="#">Contact us</a>
+</div>
+</div>
+</nav>
+
+<header class="hero flex items-center">
+<div class="container">
+<div class="welcome flex items-center">
+<span>Welcome to Bag Store</span>
+</div>
+<h1>The Most <span>Attractive</span> website</h1>
+<p>chose best thing for your favour.</p>
+<div>
+<button class ="btn btn-primary">Learn More</button>
+<button class ="btn btn-secondary">Shop Now</button>
+</div>
+<div class="hero-image">
+<img src="./images/download(1).jfif"alt="">
+</div>
+</div>
+</header>
+<section class"top-products">
+<div class="container">
+<h1>Main Products</h1>
+<div class="slider"></div>
+</div>
+</section>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+
+</script>
+</body>
+
+</html>
